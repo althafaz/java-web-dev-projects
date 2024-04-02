@@ -4,7 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Area {
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws InputMismatchException{
         Scanner input = new Scanner(System.in);
         double radius = 0;
 
@@ -17,10 +17,11 @@ public class Area {
                 if(radius > 0 ){
                     double calArea = Circle.getArea(radius);
                     System.out.println("Area of circle is " + calArea);
+                    System.exit(0);
                 }
 
             } catch (InputMismatchException e) {
-                System.out.println("Double value is not value");
+                System.out.println("Double value is not valid");
                 main(args);
             }
         }
