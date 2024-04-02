@@ -10,18 +10,18 @@ public class Area {
 
 
         while(radius <= 0) {
-
            try {
                System.out.print("Radius of the circle: ");
                radius = input.nextDouble();
 
-                if(radius > 0){
+                if(radius > 0 ){
                     double calArea = Circle.getArea(radius);
                     System.out.println("Area of circle is " + calArea);
                 }
+
             } catch (InputMismatchException e) {
                 System.out.println("Double value is not value");
-                break;
+                main(args);
             }
         }
     }
