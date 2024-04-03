@@ -20,12 +20,12 @@ public class ArrayGradebook {
         do {
             newStudent = input.nextLine();
 
-            if (!newStudent.equals("")) {
+            if (!newStudent.isEmpty()) {
                 students[numStudents] = newStudent;
                 numStudents++;
             }
 
-        } while(!newStudent.equals(""));
+        } while(!newStudent.isEmpty());
 
         // Get student grades
         for (int i = 0; i < numStudents; i++) {
