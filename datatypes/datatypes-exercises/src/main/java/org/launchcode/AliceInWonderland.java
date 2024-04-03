@@ -11,7 +11,7 @@ public class AliceInWonderland {
                 "thought Alice ‘without pictures or conversation?’";
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Enter the term you're looking for: ");
+        System.out.print("Enter the term you're looking for: ");
         String termStr = input.next();
 
         System.out.println(sentence.toLowerCase().contains(termStr.toLowerCase()));
