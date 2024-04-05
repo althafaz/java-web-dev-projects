@@ -55,7 +55,4 @@ public class Main {
         return count;
     }
 
-    public static void readFromFile (){
-
-    }
 }
