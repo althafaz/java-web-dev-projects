@@ -30,6 +30,6 @@ public class BalancedBrackets {
                 }
             }
         }
-        return brackets == 0;
+        return brackets == 1;
     }
 }
