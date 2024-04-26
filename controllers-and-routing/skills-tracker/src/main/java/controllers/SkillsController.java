@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class SkillsController {
 
-    @GetMapping("hello")
+    @GetMapping
     @ResponseBody
     public String mainMenu(){
         return "<html>" +
