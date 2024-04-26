@@ -7,14 +7,16 @@ public class Main {
         CD xyZ = new CD(700,"XYZ",500,"Music");
         DVD soundOfFreedom = new DVD(4500,"Sound of freedom",4000,"Movie");
 
-        OpticalDisc oD;
-        oD = xyZ;
+
+        // TODO: Call each CD and DVD method to verify that they work as expected.
+        displayAllListsByType(xyZ);
+        displayAllListsByType(soundOfFreedom);
+    }
+
+
+    public static void displayAllListsByType(BaseDisc type){
+        OpticalDisc oD = type;
         System.out.println(oD.getDiscType());
         oD.readData(600,50);
-
-        oD = soundOfFreedom;
-        System.out.println(oD.getDiscType());
-        oD.readData(3000,70);
-        // TODO: Call each CD and DVD method to verify that they work as expected.
     }
 }

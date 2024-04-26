@@ -1,6 +1,6 @@
 package org.launchcode;
 
-public class DVD extends BaseDisc implements OpticalDisc{
+public class DVD extends BaseDisc{
 
     public DVD(double storageCapacity,String name, double capacity, String contents) {
         super(storageCapacity,name, capacity, contents);

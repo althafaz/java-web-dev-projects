@@ -1,6 +1,6 @@
 package org.launchcode;
 
-public class CD extends BaseDisc implements OpticalDisc{
+public class CD extends BaseDisc {
 
     public CD(double storageCapacity,String name, double capacity, String contents) {
         super(storageCapacity,name, capacity, contents);

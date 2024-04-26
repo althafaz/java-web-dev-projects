@@ -1,6 +1,6 @@
 package org.launchcode;
 
-public abstract class BaseDisc {
+public abstract class BaseDisc implements OpticalDisc{
 
     private double storageCapacity;
     private String name;
