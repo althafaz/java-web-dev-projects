@@ -65,5 +65,5 @@ public class HelloSpringController {
     @RequestMapping(value="goodbye")
     public String goodbye() {
         return "Goodbye!";
-    }
+    } //template-literals
 }
