@@ -3,6 +3,10 @@ package org.launchcode.thymeleaf;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class HelloSpringController {
 //    @RequestMapping(value="")
@@ -57,13 +61,25 @@ public class HelloSpringController {
         return greeting + " " + n;
     }
 
-    @RequestMapping(value="hello/{name}")
-    public String helloUrlSegment(@PathVariable String name) {
-        return "Hello " + name;
+    @RequestMapping(value="hello/{language}/{name}")
+    public String helloUrlSegment(@PathVariable String name, @PathVariable String language,Model model) {
+        model.addAttribute("greeting",createMessage(name, language));
+        return "hello";
     }
 
     @RequestMapping(value="goodbye")
+    @ResponseBody
     public String goodbye() {
         return "Goodbye!";
     } //template-literals
+
+    @RequestMapping(value="hello-list")
+    public String helloNames(Model model){
+        List<String> names = new ArrayList<>();
+        names.add("Althaf");
+        names.add("Azeez");
+        names.add("Jaleesa");
+        model.addAttribute("names",names);
+        return "hello-list";
+    }
 }
